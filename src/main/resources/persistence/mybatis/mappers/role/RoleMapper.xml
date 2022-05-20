@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.portal.dao.RoleMapper">
+	
+	
+	<select id="getRoleByUseridDB" statementType="CALLABLE"  parameterType="java.util.Map">
+        {call admin_qrol$getrolebyuserid(
+                        
+                        #{p_user_id,      	jdbcType=NUMERIC, javaType=java.lang.Integer, mode=IN},
+                        #{p_cod_rpta,       jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT},
+                        #{p_rol_id,         jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT},
+                        #{p_rol_name,       jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT}
+         )
+        }
+    </select> 
+	<select id="getRoleByUserid" parameterType="int" resultType="Role">
+		SELECT * FROM rol where userid=#{userid}
+	</select>
+
+</mapper>
