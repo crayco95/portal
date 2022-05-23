@@ -9,9 +9,9 @@
         {call admin_qrol$getrolebyuserid(
                         
                         #{p_user_id,      	jdbcType=NUMERIC, javaType=java.lang.Integer, mode=IN},
-                        #{p_cod_rpta,       jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT},
-                        #{p_rol_id,         jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT},
-                        #{p_rol_name,       jdbcType=VARCHAR, javaType=java.lang.String, mode=OUT}
+                        #{p_cod_rpta,       jdbcType=VARCHAR, javaType=java.lang.String,  mode=OUT},
+                        #{p_rol_id,         jdbcType=VARCHAR, javaType=java.lang.String,  mode=OUT},
+                        #{p_rol_name,       jdbcType=VARCHAR, javaType=java.lang.String,  mode=OUT}
          )
         }
     </select> 
