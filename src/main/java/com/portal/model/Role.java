@@ -1,27 +1,21 @@
 package com.portal.model;
 
 public class Role {
-	private int id;
-	private int userid;
-	private String name;
+	private int rolid;
+	private String rolname;
+	public int getRolid() {
+		return rolid;
+	}
+	public void setRolid(int rolid) {
+		this.rolid = rolid;
+	}
+	public String getRolname() {
+		return rolname;
+	}
+	public void setRolname(String rolname) {
+		this.rolname = rolname;
+	}
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public int getUserid() {
-		return userid;
-	}
-	public void setUserid(int userid) {
-		this.userid = userid;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
+	
 	
 }

@@ -7,4 +7,7 @@
 	<select id="findByUsername" parameterType="String" resultType="User">
 	  SELECT * FROM users WHERE username = #{username};
 	</select>
+	<select id="findByUserid" parameterType="Integer" resultType="User">
+		SELECT * FROM users WHERE id = #{id};
+	</select>
 </mapper>

@@ -1,9 +1,19 @@
 package com.portal.model;
 
+import java.util.List;
+
 public class User {
 	private int id;
 	private String username;
 	private String password;
+	public List<Role> roles;
+	
+	public List<Role> getRoles() {
+		return roles;
+	}
+	public void setRoles(List<Role> roles) {
+		this.roles = roles;
+	}
 	public int getId() {
 		return id;
 	}
