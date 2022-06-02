@@ -4,32 +4,39 @@
 
 <mapper namespace="com.portal.dao.StudentMapper">
 
-    
+    <select id="getAllStudentsDb" statementType="CALLABLE"  parameterType="java.util.Map">
+        {call api_ge_allstudents(
+                        #{p_cod_rpta,       jdbcType=VARCHAR, javaType=java.lang.String,  mode=OUT},
+                        #{p_student,        jdbcType=VARCHAR, javaType=java.lang.String,  mode=OUT, typeHandler=com.portal.persistence.handler.HandlerStudentJson} 
+                        
+         )
+        }
+    </select>
     <select id="findAll" resultType="Student">
-        SELECT id, name, grade, email
+        SELECT *
 		FROM student
     </select>
     
     <select id="getStudent" parameterType="int" resultType="Student">
-	  SELECT * FROM student WHERE id = #{id}
+	  SELECT * FROM student WHERE studentid = #{studentid}
 	</select>
 	
 	<insert id="insertStudent" useGeneratedKeys="true"
 	    keyProperty="id" parameterType="Student">
-	  insert into student (name,grade,email)
-	  values (#{name},#{grade},#{email});
+	  insert into student (studentname,studentgrade,studentemail)
+	  values (#{studentname},#{studentgrade},#{studentemail});
 	</insert>
 	
 	<update id="updateStudent">
 	  update student set
-	    name = #{name},
-	    grade = #{grade},
-	    email = #{email}
-	  where id = #{id}
+	    studentname = #{studentname},
+	    studentgrade = #{studentgrade},
+	    studentemail = #{studentemail}
+	  where studentid = #{studentid}
 	</update>
 	
 	<delete id="deleteStudent" parameterType="int">
-	  delete from student where id = #{id}
+	  delete from student where studentid = #{studentid}
 	</delete>
 	
 </mapper>

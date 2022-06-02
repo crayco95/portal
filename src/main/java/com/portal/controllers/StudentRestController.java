@@ -9,14 +9,15 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.portal.dao.StudentMapper;
 import com.portal.model.Student;
+import com.portal.persistence.StudentServiceDb;
 
 @RestController
 @RequestMapping("/students")
 public class StudentRestController {
 	@Autowired
-	private StudentMapper studentMapper;
+	private StudentServiceDb studentServiceDb;
 	@GetMapping("/all")
-	public List<Student> findAll(){
-		return studentMapper.findAll();
+	public List<Student> getAllStudentsDb(){
+		return studentServiceDb.getAllStudentsDb();
 	}
 }

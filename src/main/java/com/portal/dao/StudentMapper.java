@@ -1,5 +1,6 @@
 package com.portal.dao;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Optional;
 
@@ -12,6 +13,8 @@ public interface StudentMapper {
 	
 
 	public List<Student> findAll();
+	
+	public void getAllStudentsDb(HashMap<Object, Object> parametrosINOUT);
 	
 	public Student getStudent(int id);
 	

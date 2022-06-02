@@ -17,9 +17,9 @@
 		<h2> Añadir estudiante</h2>
 		<hr>
 		<form th:action="@{/saveStudent}" th:object="${student}" method="POST">
-		<input type ="text" th:field="*{name}" placeholder="Ingrese el nombre" class="form-control col-4 mb-4">
-		<input type ="text" th:field="*{grade}" placeholder="Ingrese el grado" class="form-control col-4 mb-4">
-		<input type ="text" th:field="*{email}" placeholder="Ingrese el correo" class="form-control col-4 mb-4">
+		<input type ="text" th:field="*{studentname}" placeholder="Ingrese el nombre" class="form-control col-4 mb-4">
+		<input type ="text" th:field="*{studentgrade}" placeholder="Ingrese el grado" class="form-control col-4 mb-4">
+		<input type ="text" th:field="*{studentemail}" placeholder="Ingrese el correo" class="form-control col-4 mb-4">
 		
 		<!--  <label>Cursos asignados</label>
 		<input type ="number" th:field="*{courses}" placeholder="ID del curso: 1. Matematicas 2.Sociales 3.Filosofia" class="form-control col-4 mb-4">

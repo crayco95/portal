@@ -2,35 +2,35 @@ package com.portal.model;
 
 public class Student {
 	
-	private int id;
-	private String name;
-	private String grade;
-	private String email;
+	private int studentid;
+	private String studentname;
+	private String studentgrade;
+	private String studentemail;
+	public int getStudentid() {
+		return studentid;
+	}
+	public void setStudentid(int studentid) {
+		this.studentid = studentid;
+	}
+	public String getStudentname() {
+		return studentname;
+	}
+	public void setStudentname(String studentname) {
+		this.studentname = studentname;
+	}
+	public String getStudentgrade() {
+		return studentgrade;
+	}
+	public void setStudentgrade(String studentgrade) {
+		this.studentgrade = studentgrade;
+	}
+	public String getStudentemail() {
+		return studentemail;
+	}
+	public void setStudentemail(String studentemail) {
+		this.studentemail = studentemail;
+	}
 	
-	public int getId() {
-		return id;
-	}
-	public void setId(int id) {
-		this.id = id;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public String getGrade() {
-		return grade;
-	}
-	public void setGrade(String grade) {
-		this.grade = grade;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
 	
 	
 }
